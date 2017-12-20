@@ -16,7 +16,7 @@ $(function(){
         var apiKey = "0b0a0a23cc70e6ebfd82f03d25f3ecbe";
         var photoPerPage = 100;
         $.getJSON(
-            "http://api.flickr.com/services/rest/",
+            "https://api.flickr.com/services/rest/",
             {
                 method: 'flickr.people.getPhotos',
                 api_key: apiKey,
@@ -29,7 +29,7 @@ $(function(){
 	            var nbPages = pagesData.photos.pages;
                 // get an array of random photos
                 $.getJSON(
-                    "http://api.flickr.com/services/rest/",
+                    "https://api.flickr.com/services/rest/",
                     {
                         method: 'flickr.people.getPublicPhotos',
                         api_key: apiKey,
@@ -54,7 +54,7 @@ $(function(){
                             }
                             // now call the flickr API and get the picture with a nice size
                             $.getJSON(
-                                "http://api.flickr.com/services/rest/",
+                                "https://api.flickr.com/services/rest/",
                                 {
                                     method: 'flickr.photos.getSizes',
                                     api_key: apiKey,
