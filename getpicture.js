@@ -39,7 +39,10 @@ $(function(){
                 $("#log").text("First JSON is fine, we are loading second JSON (you can get all data from here anyway)");
                 // get a random id from the array
                 var photo = data.photos.photo[ Math.floor( Math.random() * data.photos.photo.length ) ];
-
+                if (photo == undefined) {
+                    // In some cases, flickr returns some incorrect id, reloading the page in this case
+                     location.reload();
+                }
                 // now call the flickr API and get the picture with a nice size
                 $.getJSON(
                     "http://api.flickr.com/services/rest/",
