@@ -56,8 +56,9 @@ $(function(){
                     function(response){
                         if(response.stat == 'ok'){
                             console.log(photo.title);
+                            var d = photo.datetaken.split(" ");
                             $("#log").text("Second JSON is fine");
-                            $('#'+your_div_id+'title').text(photo.title);
+                            $('#'+your_div_id+'title').text(photo.title + ' - ' + d[0]);
                             var the_url = response.sizes.size[10].source;
                             $("#"+your_div_id).attr("src", the_url);
 
