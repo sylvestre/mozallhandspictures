@@ -41,18 +41,17 @@ h1 {
   max-width: 100%;
 }
 
+@font-face {
+  font-family: "Zilla Slab Highlight";
+  src: url("ZillaSlabHighlight-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+
 .brand {
-  display: block;
-  overflow: hidden;
-  position: absolute;
-  top: 1em;
-  left: 1em;
-  background-image: url(images/wordmark.svg);
-  background-repeat: no-repeat;
-  text-indent: -9999px;
-  width: 6em;
-  height: 2em;
-  background-size: contain;
+  font-family: "Zilla Slab Highlight";
+  font-weight: bold;
+  color: unset;
+  font-style: normal;
 }
 
 .right-bottom .github-fork-ribbon {
